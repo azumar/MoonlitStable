@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="template/layout.xhtml">
+        <ui:define name="content">
+            <h3>No account yet? Sign up below</h3>
+                <h:form id="accountForm">
+                    <h:panelGrid columns="2">
+
+                        <h:outputLabel for="First Name" value="First Name :">  </h:outputLabel>
+                        <h:inputText id="firstName" label="First Name" value="#{accountController.account.firstName}"></h:inputText>
+
+                        <h:outputLabel for="Middle Name" value="Middle Name :">
+                        </h:outputLabel>
+                        <h:inputText id="midleName" label="middle Name" value="#{accountController.account.middleName}"></h:inputText>
+
+                        <h:outputLabel for="Last Name" value="Last Name :">
+                        </h:outputLabel>
+                        <h:inputText id="lastName" label="Last Name" value="#{accountController.account.lastName}"></h:inputText>
+
+                        <h:outputLabel for="Email" value="Email :">
+                        </h:outputLabel>
+                        <h:inputText id="email" label="Email" value="#{accountController.account.email}"></h:inputText>
+
+                        <h:outputLabel for="Telephone" value="Telephone :">
+                        </h:outputLabel>
+                        <h:inputText id="telephone" label="Telephone" value="#{accountController.account.telephone}"></h:inputText>
+
+                        <h:outputLabel for="Password" value="Password :">
+                        </h:outputLabel>
+                        <h:inputSecret id ="password" label="Password" value="#{accountController.account.password}"></h:inputSecret>
+<!--                        <h:outputLabel for="Confirm Password" value="Confirm Password :">
+                        </h:outputLabel>
+                        <h:inputSecret id ="cpassword" label="Confirm Password" value=""></h:inputSecret>-->
+
+
+                        <h:panelGroup></h:panelGroup>
+                        <h:commandButton action="#{accountController.createAccount()}" value="submit"></h:commandButton>
+
+                    </h:panelGrid>
+                </h:form>
+        </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+
